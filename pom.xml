@@ -49,5 +49,13 @@
       </plugin>
     </plugins>  
   </build>
+	
+	<distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>a0ym7zyc519ci-artifactory-primary-0-releases</name>
+        <url>https://ganeshpalnitkar.jfrog.io/artifactory/default-remote-libs-release</url>
+    </repository>
+</distributionManagement>
 </project>
 
