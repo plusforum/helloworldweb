@@ -50,12 +50,17 @@
     </plugins>  
   </build>
 	
-	<distributionManagement>
+<distributionManagement>
     <repository>
         <id>central</id>
         <name>a0ym7zyc519ci-artifactory-primary-0-releases</name>
-        <url>https://ganeshpalnitkar.jfrog.io/artifactory/default-remote-libs-release</url>
+        <url>https://ganeshpalnitkar.jfrog.io/artifactory/maven-repo</url>
     </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>a0ym7zyc519ci-artifactory-primary-0-snapshots</name>
+        <url>https://ganeshpalnitkar.jfrog.io/artifactory/maven-repo</url>
+    </snapshotRepository>
 </distributionManagement>
 </project>
 
