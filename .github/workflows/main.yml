@@ -1,13 +1,16 @@
-name: Hello World
-
-on:
-  push:
-    branches: 
-      - master
-
+name: Runner Comparison
+on: 
+  - workflow_dispatch
 jobs:
-  hello:
+  linux:
     runs-on: ubuntu-latest
     steps:
-      - name: Print message
-        run: echo "Hello GitHub Actions!"
+      - run: uname -a
+  windows:
+    runs-on: windows-latest
+    steps:
+      - run: systeminfo
+  mac:
+    runs-on: macos-latest
+    steps:
+      - run: sw_vers
