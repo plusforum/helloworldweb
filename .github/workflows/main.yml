@@ -1,16 +1,9 @@
-name: Runner Comparison
+name: Checkout Demo
 on: 
-  - workflow_dispatch
+  push
 jobs:
-  linux:
+  checkout:
     runs-on: ubuntu-latest
     steps:
-      - run: uname -a
-  windows:
-    runs-on: windows-latest
-    steps:
-      - run: systeminfo
-  mac:
-    runs-on: macos-latest
-    steps:
-      - run: sw_vers
+      - uses: actions/checkout@v4
+      - run: ls -la
