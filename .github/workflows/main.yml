@@ -21,6 +21,10 @@ jobs:
           java-version: '8'
           cache: maven
 
-      # Step 3: Build using Maven
-      - name: Build with Maven
-        run: mvn clean compile
+      # Step 3: Build and test using Maven
+      - name: Build and Test with Maven
+        run: mvn clean test
+
+      # step 4: Test using Maven
+      - name: package the application
+        run: mvn clean package -DskipTests
