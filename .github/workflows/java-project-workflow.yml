@@ -3,7 +3,7 @@ name: Java_Maven-Docker-Terraform-AWS
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build-test:
