@@ -1,4 +1,4 @@
-name: Java Maven → Docker → Terraform → AWS
+name: Java_Maven→Docker→Terraform→AWS
 
 on:
   push:
