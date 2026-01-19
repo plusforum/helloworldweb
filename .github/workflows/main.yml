@@ -6,7 +6,7 @@ on:
 
 jobs:
   build-test:
-    runs-on: ubuntu-latest
+    runs-on: workflow_dispatch
     steps:
       # Step 1: Checkout source code
       - name: Checkout code
@@ -24,7 +24,7 @@ jobs:
 
   package-deploy:
     needs: build-test
-    runs-on: ubuntu-latest
+    runs-on: workflow_dispatch
     steps:
       # Step 1: Checkout source code
       - name: Checkout code
