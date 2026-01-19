@@ -1,5 +1,9 @@
-FROM ganeshhp/tomcat:10.0.13
+FROM tomcat:9.0-jdk17-temurin
 
-ADD ./Helloworldwebapp-dev.war /opt/tomcat/webapps/
+RUN rm -rf /usr/local/tomcat/webapps/*
 
+COPY target/*.war /usr/local/tomcat/webapps/ROOT.war
 
+EXPOSE 8080
+
+CMD ["catalina.sh", "run"]
